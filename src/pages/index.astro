@@ -25,24 +25,27 @@ const projects = (await getCollection('work'))
 // https://docs.astro.build/basics/astro-components/
 ---
 
+
 <BaseLayout>
 	<div class="stack gap-20 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Jeanine White"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					title="Hello, my name is Clarence Gono"
+					tagline="I am a Creative Developer and multi-skilled IT professional currently based in the 🇵🇭."
 					align="start"
 				>
 					<div class="roles">
+						<Pill><Icon icon="check-circle" size="1.33em" /> Certified IT Professional</Pill>
 						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+						<Pill><Icon icon="ux-ui-designer" size="1.33em" /> UX/UI Designer</Pill>
+						<Pill><Icon icon="seo" size="1.33em" /> SEO</Pill>
+
 					</div>
 				</Hero>
 
 				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
+					alt="Clarence Gono in glasses"
 					width="480"
 					height="620"
 					src="/assets/portrait.jpg"
@@ -81,17 +84,17 @@ const projects = (await getCollection('work'))
 
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
-					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
-					</p>
+					<h3>Companies I’ve Had the Pleasure of Working With</h3>
+<p>
+    I’ve had the privilege of collaborating with some amazing companies, helping them achieve their goals through innovative web development, design, digital solutions, and even operations and project management. Take a look below to see who I’ve had the pleasure of working with.
+</p>
+
 				</header>
 
 				<div class="gallery">
 					<Grid variant="small">
 						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
+							['Keller Williams Realty - Harris Luxury Group', 'Coast 2 Coast Realty', 'Outmerce', 'Puttyworks', 'BaseHOA', 'CreatorCrowd', 'LoomLease'].map((brand) => (
 								<li class="mention-card">
 									<p>{brand}</p>
 								</li>

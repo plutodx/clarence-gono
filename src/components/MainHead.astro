@@ -7,13 +7,18 @@ interface Props {
 }
 
 const {
-	title = 'Jeanine White: Personal Site',
-	description = 'The personal site of Jeanine White',
+	title = 'Clarence Gono',
+	description = 'I am a Creative Developer and multi-skilled IT professional currently based in the Philippines 🇵🇭.',
 } = Astro.props;
 ---
 
 <meta charset="UTF-8" />
-<meta name="description" property="og:description" content={description} />
+<meta name="description" property="og:Clarence Gono" content={description} />
+<meta property="og:title" content="Clarence Gono - Web Developer" />
+<meta property="og:description" content="Clarence Gono is a Creative Developer, multi-skilled IT professional based in the Philippines." />
+<meta property="og:image" content={process.env.PUBLIC_URL + '/assets/portrait.jpg'} />
+
+
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
 <title>{title}</title>
