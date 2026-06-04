@@ -1,7 +1,10 @@
 ---
-title: "How to Get Named When Buyers Ask AI Who the Best Agent Is"
-description: "A plain look at why your name shows up, or doesn't, when someone asks ChatGPT or Perplexity for the best agent in their market, and what actually moves it."
+title: How to Get Named When Buyers Ask AI Who the Best Agent Is
+description: A plain look at why your name shows up, or doesn't, when someone
+  asks ChatGPT or Perplexity for the best agent in their market, and what
+  actually moves it.
 pubDate: 2026-06-04
+heroImage: /images/blog/get-named-by-ai.jpeg
 draft: false
 ---
 
