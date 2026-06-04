@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: main   # the branch your live site builds from. Change if not "main".
+
+media_folder: "public/images/blog"   # where uploaded images are saved in the repo
+public_folder: "/images/blog"        # the URL those images resolve to
+
+collections:
+  - name: "blog"
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: ["pubDate", "title"]
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description (SEO + previews)", name: "description", widget: "text" }
+      - { label: "Publish Date", name: "pubDate", widget: "datetime" }
+      - { label: "Updated Date", name: "updatedDate", widget: "datetime", required: false }
+      - { label: "Hero Image", name: "heroImage", widget: "image", required: false }
+      - { label: "Draft (hide from site)", name: "draft", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
