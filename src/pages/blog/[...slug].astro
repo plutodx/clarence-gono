@@ -2,8 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import BlogLayout from '../../layouts/BlogLayout.astro';
 
-// Astro 4 note: see SETUP-blog.md. You'd use `post.slug`, drop the `render`
-// import, and call `await post.render()` instead of `await render(post)`.
+// Astro 4 note: use post.slug instead of post.id, and `await post.render()`.
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
   return posts.map((post) => ({
@@ -17,6 +16,8 @@ const { Content } = await render(post);
 const { title, description, pubDate, updatedDate, heroImage } = post.data;
 
 const fmt = (d) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+const SITE = 'https://clarencegono.com';
+const ogImage = heroImage ? (heroImage.startsWith('http') ? heroImage : SITE + heroImage) : undefined;
 
 const schema = {
   "@context": "https://schema.org",
@@ -25,11 +26,12 @@ const schema = {
   "description": description,
   "datePublished": pubDate.toISOString(),
   ...(updatedDate ? { "dateModified": updatedDate.toISOString() } : {}),
-  "author": { "@type": "Person", "name": "Clarence Gono", "url": "https://clarencegono.com/" },
+  ...(ogImage ? { "image": ogImage } : {}),
+  "author": { "@type": "Person", "name": "Clarence Gono", "url": SITE + "/" },
   "publisher": { "@type": "Person", "name": "Clarence Gono" },
 };
 ---
-<BlogLayout title={`${title} | Clarence Gono`} description={description}>
+<BlogLayout title={`${title} | Clarence Gono`} description={description} image={ogImage}>
   <article class="wrap" style="padding:64px 0 20px">
     <p class="eyebrow">Clarence Gono</p>
     <h1 style="font-family:'Fraunces',serif;font-weight:900;font-size:clamp(34px,5.2vw,56px);line-height:1.04;letter-spacing:-.025em;margin:14px 0 18px">{title}</h1>
