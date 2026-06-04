@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <style>
   :root{
     --bone:#F7EDEC;
@@ -229,6 +230,7 @@
       <a href="#work">Work</a>
       <a href="#proof">Proof</a>
       <a href="#audit">Free audit</a>
+      <a href="/blog">Blog</a>
       <a class="nav-cta" href="#contact">Get in touch</a>
     </nav>
   </div>
@@ -579,3 +581,17 @@
 
 </body>
 </html>
+
+<script is:inline>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
+
