@@ -1,0 +1,143 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+
+const title = "Luxury Presence Website Developer | Clarence Gono";
+const description = "A Luxury Presence website developer who makes those beautiful sites actually rank. Customization, SEO, and AI visibility for agents and teams on Luxury Presence.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://clarencegono.com/luxury-presence-developer/#webpage",
+      "url": "https://clarencegono.com/luxury-presence-developer/",
+      "name": title,
+      "description": description,
+      "about": { "@id": "https://clarencegono.com/#service" }
+    },
+    {
+      "@type": "Service",
+      "name": "Luxury Presence Website Development and SEO",
+      "serviceType": "Luxury Presence development, customization, and SEO",
+      "areaServed": "United States",
+      "provider": { "@id": "https://clarencegono.com/#clarence" },
+      "description": "Customization, search optimization, and AI-visibility work for real estate agents and teams on the Luxury Presence platform, turning design-led sites into ones that rank."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you make a Luxury Presence site rank?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, and it is the thing I get asked most about Luxury Presence. The sites look stunning out of the box, but design alone does not rank. They usually need real local content, cleaner structure, and the technical signals search engines and AI tools rely on. That is the work I add." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why isn't my Luxury Presence site getting traffic?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Almost always the same reason. A gorgeous site with very little written content for Google to read. Hero videos and big photos look great but a search engine can't rank a picture. The fix is adding the neighborhood and market pages that give the site something to be found for." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you customize Luxury Presence websites?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Within what the platform allows, I do layout, content, and front-end work to make the site yours and to open up the parts that help it rank, rather than leaving it as a pretty default." }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my Luxury Presence site get named by AI tools?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Only if the signals are there. AI tools name agents whose name, market, and specialty line up clearly across the web. A design-first site with thin text gives them little to go on. Building that out is part of what I do, so you show up when buyers ask ChatGPT or Perplexity." }
+        }
+      ]
+    }
+  ]
+};
+---
+<LandingLayout title={title} description={description}>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Luxury Presence Developer / Remote, US Clients</p>
+      <h1>Your Luxury Presence site is beautiful. Is it <em>found?</em></h1>
+      <p class="lead">Luxury Presence builds some of the best-looking real estate sites out there. But a stunning site and a ranking site aren't the same thing, and most of them are missing the content that gets them found. I'm the person who fixes that, the SEO and the substance behind the design.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="/#contact">Get in touch</a>
+        <a class="btn btn-ghost" href="/#work">See the work</a>
+      </div>
+      <div class="metrics">
+        <div class="metric"><div class="n">100%</div><div class="l">Job Success</div></div>
+        <div class="metric"><div class="n">Top Rated Plus</div><div class="l">Upwork Status</div></div>
+        <div class="metric"><div class="n">5.0</div><div class="l">Client Rating</div></div>
+        <div class="metric"><div class="n">US Clients</div><div class="l">Remote, Full-time</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="wrap">
+      <p class="eyebrow">The Luxury Presence trap</p>
+      <h2>A search engine can't rank a photo.</h2>
+      <p class="lead" style="color:var(--bone)">Big hero video, sweeping images, almost no text. It looks incredible and Google has nothing to read. That's why so many of these sites get compliments and no calls. The look pulls people in once they're there. It doesn't get them there.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">What I add</p>
+      <h2>Keep the looks. Add the substance.</h2>
+      <div class="cols">
+        <div class="card">
+          <h3>Local content that ranks</h3>
+          <p>Neighborhood and market pages that give your beautiful site something Google can actually find it for.</p>
+        </div>
+        <div class="card">
+          <h3>Structure and technical SEO</h3>
+          <p>Cleaning up the parts under the hood so the design isn't the only thing working.</p>
+        </div>
+        <div class="card">
+          <h3>Customization</h3>
+          <p>Layout and front-end work within the platform to make it yours, not the default everyone recognizes.</p>
+        </div>
+        <div class="card">
+          <h3>AI visibility</h3>
+          <p>Building the signals so you get named when buyers ask AI tools who to work with in your market.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Common questions</p>
+      <h2>Luxury Presence, answered.</h2>
+      <div class="faq-wrap">
+        <details>
+          <summary>Can you make a Luxury Presence site rank?</summary>
+          <p>Yes, and it is the thing I get asked most about Luxury Presence. The sites look stunning out of the box, but design alone does not rank. They usually need real local content, cleaner structure, and the technical signals search engines and AI tools rely on. That is the work I add.</p>
+        </details>
+        <details>
+          <summary>Why isn't my Luxury Presence site getting traffic?</summary>
+          <p>Almost always the same reason. A gorgeous site with very little written content for Google to read. Hero videos and big photos look great but a search engine can't rank a picture. The fix is adding the neighborhood and market pages that give the site something to be found for.</p>
+        </details>
+        <details>
+          <summary>Do you customize Luxury Presence websites?</summary>
+          <p>Yes. Within what the platform allows, I do layout, content, and front-end work to make the site yours and to open up the parts that help it rank, rather than leaving it as a pretty default.</p>
+        </details>
+        <details>
+          <summary>Will my Luxury Presence site get named by AI tools?</summary>
+          <p>Only if the signals are there. AI tools name agents whose name, market, and specialty line up clearly across the web. A design-first site with thin text gives them little to go on. Building that out is part of what I do, so you show up when buyers ask ChatGPT or Perplexity.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <p class="eyebrow">Let's talk</p>
+      <h2>Gorgeous site, quiet phone?</h2>
+      <p class="lead muted" style="margin:0 auto">Send me your Luxury Presence site. I'll tell you exactly why it isn't getting found and what it'd take to change that.</p>
+      <div class="btns" style="justify-content:center">
+        <a class="btn btn-primary" href="/#contact">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+</LandingLayout>
