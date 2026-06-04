@@ -1,0 +1,135 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+
+const title = "Sierra Interactive Website Developer & SEO | Clarence Gono";
+const description = "A Sierra Interactive website developer and SEO specialist. Custom builds, design work, and ranking for agents and teams already on Sierra Interactive.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://clarencegono.com/sierra-interactive-developer/#webpage",
+      "url": "https://clarencegono.com/sierra-interactive-developer/",
+      "name": title,
+      "description": description,
+      "about": { "@id": "https://clarencegono.com/#service" }
+    },
+    {
+      "@type": "Service",
+      "name": "Sierra Interactive Website Development and SEO",
+      "serviceType": "Sierra Interactive development, customization, and SEO",
+      "areaServed": "United States",
+      "provider": { "@id": "https://clarencegono.com/#clarence" },
+      "description": "Custom Sierra Interactive builds, design and layout work, and search and AI-visibility optimization for real estate agents and teams on the Sierra Interactive platform."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can you customize a Sierra Interactive website?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Sierra Interactive is strong on lead capture and IDX, but the default look is the same one your competitors use. I do custom design, layout, and front-end work so your site stops looking like the template and starts looking like you." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you improve SEO on an existing Sierra Interactive site?",
+          "acceptedAnswer": { "@type": "Answer", "text": "That is most of what I get asked for. A lot of Sierra sites are technically fine but never built out the local content that actually ranks. I add the neighborhood pages, fix the structure, and line up the signals so Google and AI tools can find you." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Sierra Interactive good and not good at?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It is built for lead generation and IDX, and it does that well. Where teams tend to plateau is content and differentiation, since the platform gives you the tools but not the local pages or the distinct look. That gap is where I work." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you build new Sierra Interactive sites from scratch?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, full builds as well as redesigns and SEO on sites that already exist. Either way the goal is the same, a Sierra site that converts leads and gets found." }
+        }
+      ]
+    }
+  ]
+};
+---
+<LandingLayout title={title} description={description}>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Sierra Interactive Developer &amp; SEO / Remote, US Clients</p>
+      <h1>Sierra Interactive sites that don't look like <em>everyone else's</em>.</h1>
+      <p class="lead">Sierra Interactive is a great engine for leads and IDX. The problem is every site on it tends to look the same and never gets the local content that ranks. I fix both. Custom builds, real design, and the SEO that turns a Sierra site into one buyers actually find.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="/#contact">Get in touch</a>
+        <a class="btn btn-ghost" href="/#work">See the work</a>
+      </div>
+      <div class="metrics">
+        <div class="metric"><div class="n">100%</div><div class="l">Job Success</div></div>
+        <div class="metric"><div class="n">Top Rated Plus</div><div class="l">Upwork Status</div></div>
+        <div class="metric"><div class="n">5.0</div><div class="l">Client Rating</div></div>
+        <div class="metric"><div class="n">US Clients</div><div class="l">Remote, Full-time</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">What I do on Sierra Interactive</p>
+      <h2>Build, customize, rank.</h2>
+      <div class="cols">
+        <div class="card">
+          <h3>Custom design and front-end</h3>
+          <p>Layout, styling, and front-end work so your Sierra site looks like your brand, not the box it shipped in.</p>
+        </div>
+        <div class="card">
+          <h3>SEO on existing sites</h3>
+          <p>The most common ask. Local pages, structure fixes, and the technical signals a Sierra site usually never got.</p>
+        </div>
+        <div class="card">
+          <h3>Full builds</h3>
+          <p>New Sierra Interactive sites set up to convert leads and rank from day one, not bolted on after.</p>
+        </div>
+        <div class="card">
+          <h3>AI visibility</h3>
+          <p>Getting your team named when buyers ask AI tools who to work with in your market.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Common questions</p>
+      <h2>Sierra Interactive, answered.</h2>
+      <div class="faq-wrap">
+        <details>
+          <summary>Can you customize a Sierra Interactive website?</summary>
+          <p>Yes. Sierra Interactive is strong on lead capture and IDX, but the default look is the same one your competitors use. I do custom design, layout, and front-end work so your site stops looking like the template and starts looking like you.</p>
+        </details>
+        <details>
+          <summary>Can you improve SEO on an existing Sierra Interactive site?</summary>
+          <p>That is most of what I get asked for. A lot of Sierra sites are technically fine but never built out the local content that actually ranks. I add the neighborhood pages, fix the structure, and line up the signals so Google and AI tools can find you.</p>
+        </details>
+        <details>
+          <summary>What is Sierra Interactive good and not good at?</summary>
+          <p>It is built for lead generation and IDX, and it does that well. Where teams tend to plateau is content and differentiation, since the platform gives you the tools but not the local pages or the distinct look. That gap is where I work.</p>
+        </details>
+        <details>
+          <summary>Do you build new Sierra Interactive sites from scratch?</summary>
+          <p>Yes, full builds as well as redesigns and SEO on sites that already exist. Either way the goal is the same, a Sierra site that converts leads and gets found.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <p class="eyebrow">Let's talk</p>
+      <h2>On Sierra Interactive and not getting found?</h2>
+      <p class="lead muted" style="margin:0 auto">Send me your site. I'll tell you what's missing and what it'd take to get it ranking and converting.</p>
+      <div class="btns" style="justify-content:center">
+        <a class="btn btn-primary" href="/#contact">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+</LandingLayout>
