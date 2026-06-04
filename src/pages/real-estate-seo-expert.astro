@@ -1,0 +1,152 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+
+const title = "Real Estate SEO Expert | Clarence Gono";
+const description = "A real estate SEO expert who builds and ranks agent and team websites on Sierra Interactive and Luxury Presence, then gets them found on Google and named by AI.";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://clarencegono.com/real-estate-seo-expert/#webpage",
+      "url": "https://clarencegono.com/real-estate-seo-expert/",
+      "name": title,
+      "description": description,
+      "about": { "@id": "https://clarencegono.com/#service" }
+    },
+    {
+      "@type": "Service",
+      "name": "Real Estate SEO",
+      "serviceType": "Real Estate Search Engine Optimization",
+      "areaServed": "United States",
+      "provider": { "@id": "https://clarencegono.com/#clarence" },
+      "description": "Search and AI-visibility work for real estate agents, teams, and brokerages, including technical SEO, local and hyperlocal content, and getting named in AI answers."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long does real estate SEO take to show results?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Usually a few months before rankings move in any real way, and longer in a competitive market. Anyone promising page one in thirty days is either guessing or about to get your site penalized. The right time to start is before you need the leads, not after." }
+        },
+        {
+          "@type": "Question",
+          "name": "What does real estate SEO actually involve?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Three things, really. A fast site that works on a phone, content that owns your local market down to the neighborhood, and a clear consistent story so search engines and AI tools trust who you are and where you work. Most of the win is in the local content nobody else bothers to write well." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with Sierra Interactive and Luxury Presence?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, those are my two main platforms. I build on them and I rank sites already built on them. If you are on a different platform, that is usually fine too, the SEO work is similar." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I just do my own SEO?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Some of it, sure. Writing honest local content is something an agent can do better than anyone, because you actually know the area. The technical setup and the AI-visibility side are where most people get stuck, and that is usually where I come in." }
+        },
+        {
+          "@type": "Question",
+          "name": "What about getting found by AI like ChatGPT?",
+          "acceptedAnswer": { "@type": "Answer", "text": "That is a big part of what I do now. When a buyer asks ChatGPT or Perplexity who the best agents are in a market, the model pulls from what the web says about you, consistently, across your site and profiles and the press. Line those signals up and you get named. That work is the same discipline as SEO, pointed at a newer set of machines." }
+        }
+      ]
+    }
+  ]
+};
+---
+<LandingLayout title={title} description={description}>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Real Estate SEO Expert / Remote, US Clients</p>
+      <h1>Get found on Google. Get <em>named</em> by AI.</h1>
+      <p class="lead">I'm Clarence. I build and rank real estate websites for agents, teams, and brokerages, mostly on Sierra Interactive and Luxury Presence. One person for the build, the SEO, and the content, instead of three who never talk to each other.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="/#contact">Get a free site audit</a>
+        <a class="btn btn-ghost" href="/#work">See the work</a>
+      </div>
+      <div class="metrics">
+        <div class="metric"><div class="n">100%</div><div class="l">Job Success</div></div>
+        <div class="metric"><div class="n">Top Rated Plus</div><div class="l">Upwork Status</div></div>
+        <div class="metric"><div class="n">5.0</div><div class="l">Client Rating</div></div>
+        <div class="metric"><div class="n">US Clients</div><div class="l">Remote, Full-time</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="wrap">
+      <p class="eyebrow">Why most agent sites don't rank</p>
+      <h2>A pretty site isn't the same as a found site.</h2>
+      <p class="lead" style="color:var(--bone)">Plenty of agents pay for a slick template, launch it, and wait. Nothing happens. The site looks great and ranks nowhere, because looking good and being found are two different jobs. The second one is the one that brings the calls.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">What I actually do</p>
+      <h2>The work that moves rankings.</h2>
+      <div class="cols">
+        <div class="card">
+          <h3>Technical foundation</h3>
+          <p>Fast loads, clean structure, mobile that doesn't fight the buyer. The boring layer everything else sits on.</p>
+        </div>
+        <div class="card">
+          <h3>Local and hyperlocal content</h3>
+          <p>Neighborhood pages, area comparisons, the lived-in detail Zillow can't write. This is where you win, not the giant national terms.</p>
+        </div>
+        <div class="card">
+          <h3>AI visibility</h3>
+          <p>Lining up your name, market, and specialty everywhere a model reads, so you get named when buyers ask ChatGPT or Perplexity.</p>
+        </div>
+        <div class="card">
+          <h3>Schema and the technical SEO that AI reads</h3>
+          <p>Structured data and clean signals that tell both Google and the new AI tools exactly who you are and what you do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Questions agents ask</p>
+      <h2>Straight answers.</h2>
+      <div class="faq-wrap">
+        <details>
+          <summary>How long does real estate SEO take to show results?</summary>
+          <p>Usually a few months before rankings move in any real way, and longer in a competitive market. Anyone promising page one in thirty days is either guessing or about to get your site penalized. The right time to start is before you need the leads, not after.</p>
+        </details>
+        <details>
+          <summary>What does real estate SEO actually involve?</summary>
+          <p>Three things, really. A fast site that works on a phone, content that owns your local market down to the neighborhood, and a clear consistent story so search engines and AI tools trust who you are and where you work. Most of the win is in the local content nobody else bothers to write well.</p>
+        </details>
+        <details>
+          <summary>Do you work with Sierra Interactive and Luxury Presence?</summary>
+          <p>Yes, those are my two main platforms. I build on them and I rank sites already built on them. If you are on a different platform, that is usually fine too, the SEO work is similar.</p>
+        </details>
+        <details>
+          <summary>Can I just do my own SEO?</summary>
+          <p>Some of it, sure. Writing honest local content is something an agent can do better than anyone, because you actually know the area. The technical setup and the AI-visibility side are where most people get stuck, and that is usually where I come in.</p>
+        </details>
+        <details>
+          <summary>What about getting found by AI like ChatGPT?</summary>
+          <p>That is a big part of what I do now. When a buyer asks ChatGPT or Perplexity who the best agents are in a market, the model pulls from what the web says about you, consistently, across your site and profiles and the press. Line those signals up and you get named. That work is the same discipline as SEO, pointed at a newer set of machines.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <p class="eyebrow">Free site audit</p>
+      <h2>Want to know why your site isn't ranking?</h2>
+      <p class="lead muted" style="margin:0 auto">Send me your site. I'll tell you what's holding it back on Google and whether AI tools can even find you, no charge.</p>
+      <div class="btns" style="justify-content:center">
+        <a class="btn btn-primary" href="/#contact">Get my free audit</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+</LandingLayout>
