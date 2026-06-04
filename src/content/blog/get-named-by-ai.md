@@ -4,7 +4,7 @@ description: A plain look at why your name shows up, or doesn't, when someone
   asks ChatGPT or Perplexity for the best agent in their market, and what
   actually moves it.
 pubDate: 2026-06-04
-heroImage: ""
+heroImage: /images/blog/get-named-by-ai.png
 draft: false
 ---
 # How to Show Up in ChatGPT, Gemini, and Perplexity When Buyers Ask for the Best Luxury Agent in Your City
