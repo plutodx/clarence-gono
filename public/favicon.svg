@@ -1,9 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128">
-<path d="M93.31,70,28,128l65.27,58a8,8,0,1,1-10.62,12l-72-64a8,8,0,0,1,0-12l72-64A8,8,0,1,1,93.31,70Zm152,52-72-64a8,8,0,0,0-10.62,12L228,128l-65.27,58a8,8,0,1,0,10.62,12l72-64a8,8,0,0,0,0-12Z"></path>
-    <style>
-        path { fill: #000; }
-        @media (prefers-color-scheme: dark) {
-            path { fill: #FFF; }
-        }
-    </style>
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="128" height="128" fill="#F7EDEC"/>
+  
+  <!-- Accent circle -->
+  <circle cx="64" cy="64" r="52" fill="#8f2c4e" opacity="0.15"/>
+  
+  <!-- Main initials badge -->
+  <circle cx="64" cy="64" r="48" fill="#BC3F69"/>
+  
+  <!-- Inner highlight circle (subtle depth) -->
+  <circle cx="64" cy="64" r="44" fill="none" stroke="#F7EDEC" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Initials "CG" in serif -->
+  <text x="64" y="78" font-family="Fraunces, serif" font-size="56" font-weight="600" text-anchor="middle" fill="#F7EDEC" letter-spacing="-2">CG</text>
+  
+  <!-- Subtle dot element (web/connection motif) -->
+  <circle cx="95" cy="45" r="3.5" fill="#F7EDEC" opacity="0.8"/>
+  <circle cx="105" cy="55" r="2.5" fill="#F7EDEC" opacity="0.6"/>
 </svg>
