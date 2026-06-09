@@ -1,151 +1,311 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from "astro:content";
 
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
+const blogPosts = await getCollection("blog");
+const recentPosts = blogPosts
+  .filter((post) => !post.data.draft)
+  .sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime())
+  .slice(0, 3);
 ---
 
-<BaseLayout title="About | Clarence Gono" description="Learn more about Clarence Gono, his background, certifications, and skills.">
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-			>
-				<!-- <img
-					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
-					alt="Clarence Gono"
-				/> -->
-			</Hero>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Clarence Gono. Real estate web developer & SEO specialist. Builds ranked websites for luxury agents on Sierra Interactive and Luxury Presence." />
+    <meta name="og:title" content="Clarence Gono — Real Estate Web & SEO" />
+    <meta name="og:description" content="Real estate web developer & SEO specialist building ranked websites for luxury agents." />
+    <meta name="og:type" content="website" />
+    <meta name="og:url" content="https://clarencegono.com/about/" />
+    <title>About — Clarence Gono</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@72,600&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-			<section>
-				<h2 class="section-title">Background</h2>
-				<div class="content">
-					<p>
-						Hello! I’m Clarence Gono, a passionate and dedicated Full-Stack Web Developer based in the Philippines. 
-						Over the years, I’ve had the opportunity to work on a wide range of exciting projects, combining my 
-						technical expertise with creativity to deliver impactful solutions. From developing websites to collaborating 
-						with clients, my goal has always been to create seamless, user-friendly digital experiences.  
-					</p>
-					<p>
-						Throughout my career, I’ve honed my skills in <strong>web development</strong>, <strong>UX/UI design</strong>, <strong>SEO</strong>, and <strong>project management</strong>, 
-						working with various companies and individuals to bring their ideas to life. I'm driven by a love for problem-solving and 
-						creating innovative solutions that can help businesses thrive in the digital world.
-					</p>
-					<p>
-						In addition to my technical skills, I have a strong background in <strong>team leadership</strong> and <strong>client communication</strong>, 
-						which has allowed me to manage projects efficiently and ensure that every client’s vision is realized.
-					</p>
+      body {
+        font-family: "Hanken Grotesk", sans-serif;
+        color: #231019;
+        background-color: #F7EDEC;
+        line-height: 1.6;
+      }
 
-					<p>
-						Download my latest resume <a href="https://drive.google.com/file/d/11ywmMAZFMhbRXBCSVZDTGWpRH-HJj4iE/view?usp=sharing" target="_blank" rel="noopener noreferrer">Here</a>
-					</p>
-				</div>
-			</section>
+      header {
+        padding: 2rem 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #F7EDEC;
+        border-bottom: 1px solid #DBC5C9;
+      }
 
-			<section>
-				<h2 class="section-title">Certifications</h2>
-				<div class="content">
-					<p>
-						Here are some certifications I’ve earned to help expand my knowledge and skills:
-					</p>
-					<ul>
-						<li>
-							<strong>Civil Service Professional</strong>  
-							<a href="https://exam.csc.gov.ph/detail_examinee?id=116079" target="_blank" rel="noopener noreferrer">View Certification</a>
-						</li>
-						<li>
-							<strong>Google Certified</strong>  
-							<a href="https://skillshop.credential.net/5bd3f45d-88ab-4585-838e-8bf6607eb30c" target="_blank" rel="noopener noreferrer">View Certification</a>
-						</li>
+      .logo {
+        font-family: "Fraunces", serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #231019;
+        text-decoration: none;
+      }
 
-						<li>
-							<strong>TESOL/TEFL Certified</strong>  
-							<a href="https://drive.google.com/file/d/13LGRqh0WmzFJjgntNdNtD-Fmh41AS1Wc/view?usp=sharing" target="_blank" rel="noopener noreferrer">View Certification</a>
-						</li>
-					</ul>
-				</div>
-			</section>
+      nav a {
+        color: #231019;
+        text-decoration: none;
+        margin-left: 2rem;
+        font-size: 0.95rem;
+        transition: color 0.2s;
+      }
 
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>
-						I possess a wide range of technical and soft skills, including:
-					</p>
-					<ul>
-						<li><strong>Web Development:</strong> HTML, CSS, JavaScript, React, PHP, Laravel, MySQL, Astro</li>
-						<li><strong>Design:</strong> UX/UI design, wireframing, prototyping, Adobe XD, Figma</li>
-						<li><strong>SEO:</strong> On-page SEO, keyword research, Google Analytics, performance optimization</li>
-						<li><strong>Project Management:</strong> Agile methodology, Trello, Notion, collaboration tools</li>
-						<li><strong>Communication & Leadership:</strong> Client relations, team collaboration, project leadership</li>
-					</ul>
-				</div>
-			</section>
-		</main>
+      nav a:hover {
+        color: #BC3F69;
+      }
 
-		<ContactCTA />
-	</div>
-</BaseLayout>
+      .hero {
+        padding: 4rem 1.5rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
 
+      .bio-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+        margin-bottom: 5rem;
+      }
 
+      .bio-image {
+        display: flex;
+        justify-content: center;
+      }
 
-<style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
+      .bio-image img {
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #BC3F69;
+        box-shadow: 0 8px 24px rgba(188, 63, 105, 0.15);
+      }
 
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
+      .bio-text h1 {
+        font-family: "Fraunces", serif;
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+        color: #231019;
+        line-height: 1.1;
+      }
 
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
+      .bio-text p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        color: #231019;
+        line-height: 1.7;
+      }
 
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
+      .bio-text .headline {
+        color: #BC3F69;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 1rem;
+      }
 
-	.content {
-		grid-column: 2 / 4;
-	}
+      .credentials {
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background-color: rgba(188, 63, 105, 0.08);
+        border-left: 4px solid #BC3F69;
+      }
 
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
+      .credentials p {
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
+      }
 
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
+      .cta-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background-color: #BC3F69;
+        color: #F7EDEC;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: 600;
+        transition: background-color 0.2s;
+        margin-top: 1rem;
+      }
 
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
+      .cta-button:hover {
+        background-color: #8f2c4e;
+      }
 
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
+      .services {
+        margin: 3rem 0;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 4px;
+      }
 
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
-</style>
+      .services h2 {
+        font-family: "Fraunces", serif;
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        color: #231019;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .service-item {
+        padding: 1rem;
+      }
+
+      .service-item h3 {
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: #BC3F69;
+      }
+
+      .service-item p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .contact-section {
+        margin: 3rem 0;
+        padding: 2rem;
+        background-color: #8f2c4e;
+        color: #F7EDEC;
+        border-radius: 4px;
+        text-align: center;
+      }
+
+      .contact-section h2 {
+        font-family: "Fraunces", serif;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .contact-section p {
+        font-size: 1.05rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .contact-link {
+        color: #F7EDEC;
+        text-decoration: underline;
+      }
+
+      footer {
+        padding: 2rem 1.5rem;
+        text-align: center;
+        color: #231019;
+        font-size: 0.9rem;
+        border-top: 1px solid #DBC5C9;
+      }
+
+      @media (max-width: 768px) {
+        .bio-container {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+
+        .bio-text h1 {
+          font-size: 2rem;
+        }
+
+        nav a {
+          margin-left: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/" class="logo">clarence gono</a>
+      <nav>
+        <a href="/">Work</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div class="bio-container">
+        <div class="bio-image">
+          <img src="/portrait-1.png" alt="Clarence Gono" />
+        </div>
+
+        <div class="bio-text">
+          <p class="headline">Real Estate Web & SEO</p>
+          <h1>Clarence Gono</h1>
+          
+          <p>
+            Real estate web developer and SEO specialist building ranked websites for luxury agents. I work remotely from the Philippines for clients across the US, focused on Sierra Interactive and Luxury Presence platforms.
+          </p>
+
+          <p>
+            The core problem: most real estate sites don't rank and don't convert. I fix that by combining solid technical SEO, conversion-focused design, and platform expertise.
+          </p>
+
+          <div class="credentials">
+            <p><strong>Upwork:</strong> Top Rated Plus, 100% Job Success, 5.0 rating</p>
+            <p><strong>Specialty:</strong> Sierra Interactive, Luxury Presence, custom Astro builds</p>
+            <p><strong>Also:</strong> Web & SEO VA for LUXURYSOCALREALTY, La Jolla</p>
+          </div>
+
+          <p>
+            I write about real estate SEO, generative engine optimization, and platform-specific strategies on the blog.
+          </p>
+
+          <a href="mailto:clarencearongono133@gmail.com" class="cta-button">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="services">
+        <h2>What I do</h2>
+        <div class="services-grid">
+          <div class="service-item">
+            <h3>SEO & Ranking</h3>
+            <p>Build and optimize real estate sites for search visibility. Schema, technical SEO, content strategy.</p>
+          </div>
+          <div class="service-item">
+            <h3>Web Development</h3>
+            <p>Custom builds on Astro, Sierra Interactive, or Luxury Presence. Fast, clean, conversion-ready.</p>
+          </div>
+          <div class="service-item">
+            <h3>Platform Expertise</h3>
+            <p>Deep knowledge of Sierra Interactive and Luxury Presence. I know the quirks and how to work around them.</p>
+          </div>
+          <div class="service-item">
+            <h3>AI Visibility</h3>
+            <p>Get agents named when buyers ask ChatGPT or Perplexity. Structured data and content optimization for generative engines.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-section">
+        <h2>Let's talk</h2>
+        <p>Got a site that needs ranking? Or just exploring options?</p>
+        <p>
+          Email me at <a href="mailto:clarencearongono133@gmail.com" class="contact-link">clarencearongono133@gmail.com</a>
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Clarence Gono. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
